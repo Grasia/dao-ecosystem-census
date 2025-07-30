@@ -1,66 +1,74 @@
-Let's get all of the votes.
+# DAO Votes Data Collection
 
-## Schema
+This directory contains scripts and tools for collecting voting data across different DAO platforms. Each platform has specific collection methods based on their data structure and accessibility.
 
-* platform
-* platform_deployment_id
-* proposal_id
-* vote_id
-* voter -- the id of the person who made the vote
-* date -- this should be as a pandas date, not as an epoch
-* choice -- this should be a string as this is not always true/false
-* weight -- the vote weight
+## Data Schema
 
-## Platform notes
+| Column | Description |
+|--------|-------------|
+| `platform` | Platform identifier |
+| `platform_deployment_id` | Reference to the DAO deployment |
+| `proposal_id` | Reference to the proposal |
+| `vote_id` | Unique identifier for the vote |
+| `voter` | Address/identifier of the voter |
+| `date` | Vote timestamp (as pandas datetime) |
+| `choice` | Vote choice (as string) |
+| `weight` | Vote weight value |
+
+## Platform-Specific Details
 
 ### Aragon
+- Source: DAO Analyzer dataset (July 20, 2023)
+- Notes: 
+  - Votes are called "casts" in source data
+  - Uses `createdAt` for date field
 
-Aragon has information on DAO Analyzer. We used information as of July 20, 2023.
+### DAOhaus
+- Source: DAO Analyzer dataset (July 20, 2023)
+- Notes: Uses `createdAt` for date field
 
-Aragon votes are (confusingly) called "casts". We work with the `casts.csv` file.
-
-Using `createdAt` date.
-
-
-### Daohaus
-
-Daohaus has information on DAO Analyzer. We used information as of July 20, 2023.
-Using `createdAt` date
-
-
-### Daostack
-
-Daostack has information on DAO Analyzer. We used information as of July 20, 2023.
-Using `createdAt` date
-
+### DAOstack
+- Source: DAO Analyzer dataset (July 20, 2023)
+- Notes: Uses `createdAt` for date field
 
 ### Realms
+- Source: JS SDK (July 12, 2023)
+- Notes:
+  - Includes relinquished votes
+  - Uses voterWeight for weights
+  - Choice field not present for all values
+  - See [Realms Governance docs](https://github.com/solana-labs/solana-program-library/blob/master/governance/README.md)
 
-Using the JS SDK, downloaded on July 12 2023.
-
-We include [relinquished votes](https://github.com/solana-labs/solana-program-library/blob/master/governance/README.md)
-
-We use voterWeight for the weights.
-
-`choice` is not present for all vals.
-
+### Snapshot
+- Collection period: June 23-27, 2023
+- Time window:
+  ```
+  YEAR_AGO_EPOCH = 1656021600  # 2022-06-24 00:00:00
+  NOW_EPOCH =      1687557600  # 2023-06-24 00:00:00
+  ```
+- Notes: Uses `created` for date field
 
 ### Tally
+- Source: Direct API
+- Collection date: July 18, 2023
+- Notes: Uses `timestamp` for date field
 
-Using the Tally API
-`timestamp` date
-Collected July 18, 2023.
+## Technical Implementation
 
--------------
+### Collection Process
+1. Platform-specific data collection
+2. Schema standardization
+3. Date field normalization
+4. Weight calculation/standardization
+5. Storage in parquet format
 
+### Important Notes
+- All dates are converted to pandas datetime format
+- Vote choices are stored as strings for cross-platform compatibility
+- Vote weights may have platform-specific meaning
+- Some platforms may have additional metadata in raw collection
 
-### **Snapshot
-
-Downloaded from 23 June 2023 to 27 June 2023 using the window:
-
-```
-YEAR_AGO_EPOCH = 1656021600  # 2022-06-24 00:00:00
-NOW_EPOCH =      1687557600  # 2023-06-24 00:00:00
-```
-
-We use `created` as the date.
+## Related Components
+- See `proposals/` for proposal information
+- See `deployments/` for DAO deployment data
+- See `parquet_versions/` for data versioning
