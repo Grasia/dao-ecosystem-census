@@ -1,6 +1,8 @@
 # DAO Proposals Data Collection
 
-This directory contains scripts and tools for collecting proposal data across different DAO platforms. Each platform has its own collection methodology based on available APIs and data structures.
+This directory contains scripts and tools for collecting proposal data across
+different DAO platforms. Each platform has its own collection methodology
+based on available APIs and data structures.
 
 ## Data Schema
 
@@ -15,35 +17,14 @@ This directory contains scripts and tools for collecting proposal data across di
 
 ## Platform-Specific Collection
 
-### Aragon
-- Source: DAO Analyzer dataset
-- Collection date: July 20, 2023
-- Key fields: Uses `createdAt` for date
-
-### DAOhaus
-- Source: DAO Analyzer dataset
-- Collection date: July 20, 2023
-- Key fields: Uses `createdAt` for date
-
-### DAOstack
-- Source: DAO Analyzer dataset
-- Collection date: July 20, 2023
-- Key fields: Uses `createdAt` for date
-
-### Realms
-- Source: JS SDK
-- Collection date: July 12, 2023
-- Notes: See `realms_node/README.md` for SDK details
-
-### Snapshot
-- Source: Direct API
-- Collection period: June 23-27, 2023
-- Process: Two-step collection and processing
-
-### Tally
-- Source: Direct API
-- Collection date: July 18, 2023
-- Key fields: Uses `timestamp` for date
+| Platform  | Source | Notes/Key Fields |
+|-----------|---------|----------------|
+| Aragon    | DAO Analyzer dataset | Uses `createdAt` for date |
+| DAOhaus   | DAO Analyzer dataset | Uses `createdAt` for date |
+| DAOstack  | DAO Analyzer dataset | Uses `createdAt` for date |
+| Realms    | JS SDK | See `realms_node/README.md` for SDK details |
+| Snapshot  | Direct API | Two-step collection and processing |
+| Tally     | Direct API | Uses `timestamp` for date |
 
 ## Collection Process
 
