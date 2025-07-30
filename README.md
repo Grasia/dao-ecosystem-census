@@ -23,7 +23,6 @@ patterns, governance effectiveness, and cross-platform comparisons.
 If you use this code, dataset, or associated publication in your work, please cite the following:
 
 ### Code
-If you wish to cite the code directly:  
 Schwartz, A. & Peña-Calvin, A. *DAO Ecosystem Census*. GitHub, 2024. Available at: https://github.com/Grasia/dao-ecosystem-census
 
 ### Dataset
