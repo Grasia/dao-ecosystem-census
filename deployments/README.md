@@ -18,7 +18,7 @@ Each platform's data is collected into a standardized format with the following 
 
 \* Note: Platforms have different ways of estimating the number of votes. This is
 the number of votes reported by the platform. In our final dataset the `votes_count`
-value is calculated by summing the number of votes recorded in our dataset.
+value is calculated by counting the number of votes recorded in our dataset.
 
 
 ## Types
@@ -31,13 +31,6 @@ Currently collecting data from:
 - [Aragon](https://aragon.org/)
 - [DAOstack](https://daostack.io/)
 - [DAO Haus/Moloch](https://daohaus.club/)
-
-## Platforms Under Consideration
-
-Single-organization platforms to potentially add:
-- Aave (on-chain voting)
-- Uniswap (on-chain voting, [governance portal](https://app.uniswap.org/#/vote))
-- Compound Finance (on-chain voting)
 
 ## Unsupported Platforms
 
