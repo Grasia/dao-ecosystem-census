@@ -119,14 +119,15 @@ Data sources:
 ## Technical Implementation
 
 ### Project Structure
-```
-daos-verano/
-├── deployments/      # Platform-specific deployment data collection
-├── proposals/        # Proposal data collection scripts
-├── votes/            # Voting data collection and processing
-├── organizations/    # Organization data processing
-└── parquet_versions/ # Data versioning and cleanup
-```
+
+1. **LICENSE.md**: Licensing information of the project
+1. **README.md**: Project-level description o fall work completed
+1. **organizations**: Organization data processing
+1. **deployments**: Platform-specific deployment data collection
+1. **proposals**: Proposal data collection scripts
+1. **votes**: Voting data collection and processing
+1. **parquet_versions**: Data versioning and cleanup
+1. **realms_node**: Data collection at all levels for Realms (see `realms_node/README.md` for details)
 
 ### Data Collection Process
 
@@ -167,6 +168,6 @@ This work was developed as part of a doctoral thesis at the [Universidad Complut
 
 ## References
 
-- [Final dataset derived from this code in csv](https://zenodo.org/records/10794916)
-- [DAO Analyzer Scripts](https://github.com/Grasia/dao-analyzer/blob/master/cache_scripts/README.md)
+- [Final and cleaned dataset derived from this code in CSV](https://zenodo.org/records/10794916)
+- [DAO analyzer scripts](https://github.com/Grasia/dao-analyzer/blob/master/cache_scripts/README.md)
 
