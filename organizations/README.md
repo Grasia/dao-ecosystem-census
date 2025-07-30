@@ -1,20 +1,20 @@
 # DAO Organizations Data Collection
 
-This directory contains scripts and data for collecting and analyzing information about DAO organizations from various sources. The focus is on identifying unique organizations and their relationships across different platforms.
+This directory contains scripts and data for collecting and analyzing information about DAO organizations from various sources. The focus is on identifying the maximum number of organzations in the DAO ecosystem.
 
 ## Directory Structure
 
 - `01_deepdao_daos/`: Scripts for collecting and processing DeepDAO organization data
 - `01_messari_daos/`: Scripts for processing Messari platform data
 - `combine_deepdao_and_manual_organizations/`: Tools to merge and analyze data from different sources
-- `deepdao_review/`: Analysis and review tools for DeepDAO data, including similarity detection
-- `organizations_grouping_analysis/`: Scripts for analyzing and grouping related organizations
+- `deepdao_review/`: Analysis and review tools for DeepDAO data, including similarity detection (unused in final dataset)
+- `organizations_grouping_analysis/`: Scripts for analyzing and grouping related organizations (unused in final dataset)
 
 ## Data Sources
 
 - **DeepDAO**: Primary source for organization metadata and statistics
 - **Messari**: Additional platform and organization data
-- **Manual Collection**: Curated data for validation and enrichment
+- **Manual Collection from DAO Analyzer**: Curated data for validation and enrichment
 
 ## Key Components
 
@@ -37,7 +37,7 @@ This directory contains scripts and data for collecting and analyzing informatio
 
 ## Technical Implementation
 
-### Similarity Detection
+### Similarity Detection (unused in final dataset)
 The `deepdao_review/with_sentence_embeddings/` directory contains tools for:
 - Generating embeddings for organization names
 - Computing similarity scores
@@ -50,10 +50,3 @@ The `deepdao_review/with_sentence_embeddings/` directory contains tools for:
 3. Similarity analysis and grouping
 4. Manual review and validation
 5. Integration with deployment collection
-
-## Notes
-
-- DeepDAO data collection was completed on June 23, 2023
-- Messari platform data was processed on June 26, 2023
-- Organization matching uses both automated similarity detection and manual review
-- The review process includes a custom interface for efficient validation
