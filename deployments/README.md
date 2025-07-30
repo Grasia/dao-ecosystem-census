@@ -43,8 +43,3 @@ The following platforms are currently not included:
 | Substrate | No API (has [directory](https://substrate.io/ecosystem/projects/)) |
 | OpenLaw | Too few DAOs, n<10 |
 | Colony | Too few DAOs, n<10 |
-
-## Notes
-
-- Previous Snapshot limitation of 15k deployments has been resolved as of July 20, 2023
-- Messari data includes additional unstructured content (forums, Notion pages, etc.)
