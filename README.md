@@ -1,4 +1,4 @@
-# DAOs Verano
+# DAOs Ecosystem Census
 
 A comprehensive data collection and analysis project for Decentralized Autonomous Organizations (DAOs) across multiple platforms. This repository contains tools and scripts to gather, process, and analyze data about DAO deployments, proposals, and voting patterns.
 
