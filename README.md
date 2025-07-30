@@ -167,5 +167,6 @@ This work was developed as part of a doctoral thesis at the [Universidad Complut
 
 ## References
 
+- [Final dataset derived from this code in csv] (https://zenodo.org/records/10794916)
 - [DAO Analyzer Scripts](https://github.com/Grasia/dao-analyzer/blob/master/cache_scripts/README.md)
-- [DAO Analyzer Dataset](https://www.kaggle.com/datasets/daviddavo/dao-analyzer)
+
