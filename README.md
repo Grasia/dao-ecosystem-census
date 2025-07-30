@@ -62,8 +62,8 @@ Currently collecting data from:
 
 Data sources:
 - Direct API access (Snapshot, Tally, Realms)
-- DAO Analyzer dataset (Aragon, DAOstack, DAOhaus)
-- Realms JS SDK
+- [DAO Analyzer dataset](https://www.kaggle.com/datasets/daviddavo/dao-analyzer) (Aragon, DAOstack, DAOhaus)
+- [Realms JS SDK](https://www.npmjs.com/package/@solana/spl-governance), now legacy, see [docs](https://docs.realms.today/sdk)
 
 ### Data Schema
 
@@ -99,16 +99,17 @@ Data sources:
 ### Project Structure
 ```
 daos-verano/
-├── deployments/     # Platform-specific deployment data collection
-├── proposals/       # Proposal data collection scripts
-├── votes/          # Voting data collection and processing
-├── organizations/  # Organization data processing
+├── deployments/      # Platform-specific deployment data collection
+├── proposals/        # Proposal data collection scripts
+├── votes/            # Voting data collection and processing
+├── organizations/    # Organization data processing
 └── parquet_versions/ # Data versioning and cleanup
 ```
 
 ### Data Collection Process
 
-1. **Platform-specific Collection**: Each platform has custom collectors based on available APIs/data sources
+1. **Platform-specific Collection**: Each platform has custom collectors
+based on available APIs/data sources
 2. **Data Standardization**: Raw data is transformed into a common schema
 3. **Data Validation**: Automated checks ensure data consistency
 4. **Storage**: Data is stored in Parquet format for efficient processing
@@ -135,12 +136,12 @@ Data was collected during June and July of 2023:
 ## Authorship and License
 
 * **Corresponding Author**: Andrea Peña Calvin
-* **Additional Author**: [Andrew Schwartz](https://aschwartz.me/)
-* **Institution**: Universidad Complutense de Madrid (UCM)  
 * **Contact**: andpen03@ucm.es
+* **Institution**: Universidad Complutense de Madrid (UCM)
+* **Additional Author**: [Andrew Schwartz](https://aschwartz.me/)
 * **License**: MIT
 
-This work was developed as part of a doctoral thesis at Universidad Complutense de Madrid.
+This work was developed as part of a doctoral thesis at the [Universidad Complutense de Madrid](https://www.ucm.es/).
 
 ## References
 
