@@ -2,9 +2,49 @@
 
 A comprehensive data collection and analysis project for Decentralized Autonomous Organizations (DAOs) across multiple platforms. This repository contains tools and scripts to gather, process, and analyze data about DAO deployments, proposals, and voting patterns.
 
-## Project Overview
+## About This Project
 
-This project collects data from multiple DAO platforms and standardizes it into a common schema for analysis. The data collection is organized into three main components:
+This codebase is a data collection and analysis framework designed to study
+the DAO ecosystem across multiple platforms. It is designed to gather, processes,
+and standardize data about DAO deployments, proposals, and voting patterns
+to enable comprehensive analysis of DAO governance.
+
+## Academic Context
+
+This work is part of a doctoral thesis research project at Universidad
+Complutense de Madrid (UCM), focusing on the empirical analysis of
+decentralized governance systems.
+
+The collected data and analysis tools support research into DAO participation
+patterns, governance effectiveness, and cross-platform comparisons.
+
+## Quick Start Guide
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Grasia/dao-ecosystem-census
+cd dao-ecosystem-census
+```
+
+2. Install dependencies:
+- Python 3.8+
+- Jupyter Notebooks
+- Node.js (required for Realms data collection)
+- Required Python packages (see `requirements.txt`)
+
+3. Configure platform-specific settings:
+- Set up API keys where required (e.g., Snapshot, Tally)
+- Configure data collection parameters in respective platform directories
+
+4. Run data collection:
+- Each platform has its own collection script in its respective directory
+- Follow platform-specific README files for detailed instructions
+
+## Technical Details
+
+### Data Collection Architecture
+
+The project collects data from multiple DAO platforms and standardizes it into a common schema for analysis. The data collection is organized into three main components:
 
 1. **Deployments**: Information about DAO deployments across platforms
 2. **Proposals**: Proposal data from each DAO
@@ -25,9 +65,9 @@ Data sources:
 - DAO Analyzer dataset (Aragon, DAOstack, DAOhaus)
 - Realms JS SDK
 
-## Data Schema
+### Data Schema
 
-### Deployments
+#### Deployments
 - platform
 - platform_id
 - name
@@ -36,7 +76,7 @@ Data sources:
 - proposals_count
 - additional (may contain website, social info)
 
-### Proposals
+#### Proposals
 - platform
 - platform_deployment_id
 - proposal_id
@@ -44,7 +84,7 @@ Data sources:
 - date
 - votes_count
 
-### Votes
+#### Votes
 - platform
 - platform_deployment_id
 - proposal_id
@@ -54,28 +94,53 @@ Data sources:
 - choice
 - weight
 
-## Usage
+## Technical Implementation
 
-The repository is organized by data type (deployments, proposals, votes) and
-then by platform. Each platform has its own collection scripts and specific
-implementation details.
+### Project Structure
+```
+daos-verano/
+├── deployments/     # Platform-specific deployment data collection
+├── proposals/       # Proposal data collection scripts
+├── votes/          # Voting data collection and processing
+├── organizations/  # Organization data processing
+└── parquet_versions/ # Data versioning and cleanup
+```
 
-### Running the data collection
+### Data Collection Process
 
-Each platform has its own code / process for collecting data, according to
-various factors, including API availability and the number of deployments
-per platform.
+1. **Platform-specific Collection**: Each platform has custom collectors based on available APIs/data sources
+2. **Data Standardization**: Raw data is transformed into a common schema
+3. **Data Validation**: Automated checks ensure data consistency
+4. **Storage**: Data is stored in Parquet format for efficient processing
 
-Each platform has a directory that outlines how to run its data collection,
-see each directory for details about running its collection.
+### Running the Collection
+
+Each platform has its own code/process for collecting data, according to
+various factors, including:
+
+- API availability and rate limits
+- Data volume and structure
+- Platform-specific authentication requirements
+
+See each platform's directory for specific collection instructions.
 
 ## Data Collection Dates
-Data was collected during June and July of 2023, specificlaly:
 
+Data was collected during June and July of 2023:
 - Snapshot: June 23-27, 2023
 - DAO Analyzer data: July 20, 2023
 - Realms: July 12, 2023
 - Tally: July 18, 2023
+
+## Authorship and License
+
+**Corresponding Author**: Andrea Peña Calvin
+**Additional Author**: [Andrew Schwartz](https://aschwartz.me/)
+**Institution**: Universidad Complutense de Madrid (UCM)  
+**Contact**: andpen03@ucm.es
+**License**: MIT
+
+This work was developed as part of a doctoral thesis at Universidad Complutense de Madrid.
 
 ## References
 
