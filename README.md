@@ -29,7 +29,7 @@ Schwartz, A. & Peña-Calvin, A. *DAO Ecosystem Census*. GitHub, 2024. Available 
 Census of the Ecosystem of Decentralized Autonomous Organizations 
 DOI: 10.5281/zenodo.10794915
 Link: https://zenodo.org/records/10794916 
-Example citation:  
+ 
 Peña-Calvin, A., Arroyo, J., Schwartz, A., Hassan, S., & Davó, D. *Census of the Ecosystem of Decentralized Autonomous Organizations*. Zenodo, 2024. DOI: https://doi.org/10.5281/zenodo.10794916
 
 ### Publication
