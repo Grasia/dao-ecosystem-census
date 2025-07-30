@@ -18,6 +18,29 @@ decentralized governance systems.
 The collected data and analysis tools support research into DAO participation
 patterns, governance effectiveness, and cross-platform comparisons.
 
+## Recomended citation
+
+If you use this code, dataset, or associated publication in your work, please cite the following:
+
+### Code
+If you wish to cite the code directly:  
+Schwartz, A. & Peña-Calvin, A. *DAO Ecosystem Census*. GitHub, 2024. Available at: https://github.com/Grasia/dao-ecosystem-census
+
+### Dataset
+Census of the Ecosystem of Decentralized Autonomous Organizations 
+DOI: 10.5281/zenodo.10794915
+Link: https://zenodo.org/records/10794916 
+Example citation:  
+Peña-Calvin, A., Arroyo, J., Schwartz, A., Hassan, S., & Davó, D. *Census of the Ecosystem of Decentralized Autonomous Organizations*. Zenodo, 2024. DOI: https://doi.org/10.5281/zenodo.10794916
+
+### Publication
+Peña-Calvin, A., Arroyo, J., Schwartz, A., Hassan, S. 2024. *Concentration of Power and Participation in Online Governance: the Ecosystem of Decentralized Autonomous Organizations*. In Companion Proceedings of the ACM Web Conference 2024 (WWW '24). Association for Computing Machinery, New York, NY, USA, 927–930. https://doi.org/10.1145/3589335.3651481
+
+Please cite the code, dataset and/or publication depending on your use case:
+> - **If you use the dataset** → cite the dataset and the publication (and optionally the code).
+> - **If you use the results, methods, or analysis in the paper** → cite the publication.
+> - **If you use or modify the code** → cite the GitHub repo and the publication.
+
 ## Quick Start Guide
 
 1. Clone the repository:
