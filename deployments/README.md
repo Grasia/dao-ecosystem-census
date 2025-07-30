@@ -16,9 +16,10 @@ Each platform's data is collected into a standardized format with the following 
 | `votes_count` | Number of votes in the deployment* |
 | `proposals_count` | Number of proposals in the deployment |
 
-\* Note: Vote counting varies by platform:
-- Snapshot: Sum of total votes
-- DAOstack, Aragon, DAO Haus: Total votes including duplicates from same voter
+\* Note: Platforms have different ways of estimating the number of votes. This is
+the number of votes reported by the platform. In our final dataset the `votes_count`
+value is calculated by summing the number of votes recorded in our dataset.
+
 
 ## Types
 
