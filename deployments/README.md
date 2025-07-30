@@ -24,12 +24,12 @@ Each platform's data is collected into a standardized format with the following 
 
 Currently collecting data from:
 
-- [Snapshot](https://snapshot.org/#/) (2,404 DAOs)
+- [Snapshot](https://snapshot.org/#/)
 - [Tally](https://www.tally.xyz/)
-- [Realms](https://realms.today/) (18 DAOs)
-- [Aragon](https://aragon.org/) (84 DAOs, via DAO Analyzer)
-- [DAOstack](https://daostack.io/) (12 DAOs, via DAO Analyzer) 
-- [DAO Haus/Moloch](https://daohaus.club/) (36 DAOs, via DAO Analyzer)
+- [Realms](https://realms.today/)
+- [Aragon](https://aragon.org/)
+- [DAOstack](https://daostack.io/)
+- [DAO Haus/Moloch](https://daohaus.club/)
 
 ## Platforms Under Consideration
 
@@ -42,13 +42,13 @@ Single-organization platforms to potentially add:
 
 The following platforms are currently not included:
 
-| Platform | Count | Reason |
-|----------|--------|--------|
-| Governor | 62 | No public API |
-| AssetsOnly | 30 | Platform not found |
-| Substrate | 27 | No API (has [directory](https://substrate.io/ecosystem/projects/)) |
-| OpenLaw | 3 | Too few DAOs, n<10 |
-| Colony | 2 | Too few DAOs, n<10 |
+| Platform | Reason |
+|----------|--------|
+| Governor | No public API |
+| AssetsOnly | Platform not found |
+| Substrate | No API (has [directory](https://substrate.io/ecosystem/projects/)) |
+| OpenLaw | Too few DAOs, n<10 |
+| Colony | Too few DAOs, n<10 |
 
 ## Notes
 
