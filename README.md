@@ -134,11 +134,11 @@ Data was collected during June and July of 2023:
 
 ## Authorship and License
 
-**Corresponding Author**: Andrea Peña Calvin
-**Additional Author**: [Andrew Schwartz](https://aschwartz.me/)
-**Institution**: Universidad Complutense de Madrid (UCM)  
-**Contact**: andpen03@ucm.es
-**License**: MIT
+* **Corresponding Author**: Andrea Peña Calvin
+* **Additional Author**: [Andrew Schwartz](https://aschwartz.me/)
+* **Institution**: Universidad Complutense de Madrid (UCM)  
+* **Contact**: andpen03@ucm.es
+* **License**: MIT
 
 This work was developed as part of a doctoral thesis at Universidad Complutense de Madrid.
 
