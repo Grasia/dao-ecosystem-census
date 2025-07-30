@@ -1,46 +1,83 @@
 # DAOs Verano
 
-## 01 DeepDAO DAOs Collection
+A comprehensive data collection and analysis project for Decentralized Autonomous Organizations (DAOs) across multiple platforms. This repository contains tools and scripts to gather, process, and analyze data about DAO deployments, proposals, and voting patterns.
 
-First we collect the "organizations" on DeepDAO and obtain all of the "DAOs" or "platforms" for each of them.
+## Project Overview
 
-### Docker
+This project collects data from multiple DAO platforms and standardizes it into a common schema for analysis. The data collection is organized into three main components:
 
-Build:
-```
-docker build -t ddao . -f daos.Dockerfile
-```
+1. **Deployments**: Information about DAO deployments across platforms
+2. **Proposals**: Proposal data from each DAO
+3. **Votes**: Voting records for each proposal
 
-Run:
-```
-docker run ddao
-```
+### Supported Platforms
 
-_Make sure to update the relevant variables in the python file before building_
+Currently collecting data from:
+- Snapshot (2404+ deployments)
+- Aragon (84 deployments)
+- Moloch/DAOhaus (36 deployments)
+- Realms (18 deployments)
+- DAOstack (12 deployments)
+- Tally
 
+Data sources:
+- Direct API access (Snapshot, Tally, Realms)
+- DAO Analyzer dataset (Aragon, DAOstack, DAOhaus)
+- Realms JS SDK
 
-Extract result directory from docker:
+## Data Schema
 
-```
-docker create --name dummy ddao
-docker cp dummy:/app/9999999999999 ./dockerout
-docker rm -f dummy
-```
+### Deployments
+- platform
+- platform_id
+- name
+- website
+- votes_count
+- proposals_count
+- additional (may contain website, social info)
 
-## 02 Snapshot Proposals Collection
+### Proposals
+- platform
+- platform_deployment_id
+- proposal_id
+- author
+- date
+- votes_count
 
-Here we consider all of the DAOs that are on Snapshot from the previous step and collect all of the
-proposals _from the past year_ from each of them.
+### Votes
+- platform
+- platform_deployment_id
+- proposal_id
+- vote_id
+- voter
+- date
+- choice
+- weight
 
-This step does not need to be run on a server. (n ~= 200)
+## Usage
 
-## 03 Snapshot Votes Collection
+The repository is organized by data type (deployments, proposals, votes) and
+then by platform. Each platform has its own collection scripts and specific
+implementation details.
 
-Here we collect the voting records for each of the proposals found above.
+### Running the data collection
 
-This should be run on a server, though TODO: is not yet dockerized.
+Each platform has its own code / process for collecting data, according to
+various factors, including API availability and the number of deployments
+per platform.
 
-## TKTKTK
+Each platform has a directory that outlines how to run its data collection,
+see each directory for details about running its collection.
 
-[Dao Analyzer Scripts](https://github.com/Grasia/dao-analyzer/blob/master/cache_scripts/README.md)
-[Kaggle](https://www.kaggle.com/datasets/daviddavo/dao-analyzer)
+## Data Collection Dates
+Data was collected during June and July of 2023, specificlaly:
+
+- Snapshot: June 23-27, 2023
+- DAO Analyzer data: July 20, 2023
+- Realms: July 12, 2023
+- Tally: July 18, 2023
+
+## References
+
+- [DAO Analyzer Scripts](https://github.com/Grasia/dao-analyzer/blob/master/cache_scripts/README.md)
+- [DAO Analyzer Dataset](https://www.kaggle.com/datasets/daviddavo/dao-analyzer)
